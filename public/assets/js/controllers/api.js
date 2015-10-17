@@ -38,3 +38,19 @@ api.controller('InstagramController', ['$scope', '$http',
 
     }
 ]);
+
+// foursquare controller
+api.controller('FoursquareController', ['$scope', '$http',
+    function($scope, $http) {
+        $scope.foursquareClientId = 'SOMQPXPTYGH5D45CIKDYXOTZSHPY1TMZRLYFXPCCXMAELAOH';
+        $scope.foursquareClientSecret = '3H42G4VRXP5IQK1OOR5SCAKEGAQ1CEEDAAV3H4RC0O5WJHKV';
+        $scope.foursquareUrl = 'https://api.foursquare.com/v2/venues/search?near=';
+        $scope.retrieve = function(query) {
+            $scope.foursquareUrl = $scope.foursquareUrl + query+ '&client_id='+$scope.foursquareClientId+'&client_secret='+foursquareClientSecret+'&v=20151710';
+            $http.jsonp($scope.foursquareUrl).
+            success(function(data) {
+              $scope.foursquareData = data;
+            });
+        }
+    }
+]);
