@@ -54,6 +54,15 @@ api.controller('FoursquareController', ['$scope', '$http',
                 console.log(data);
             });
         }
+
+        $scope.imgWidth = 318;
+        $scope.imgHeight = 220;
+        $scope.streetviewURL = 'https://maps.googleapis.com/maps/api/streetview?';
+        $scope.streetviewKey = 'AIzaSyDtm7_hcQI0uEXsbrhF44Gon4TZP4LwjSM';
+        $scope.getStreet = function(latitude, longitude) {
+            var streetviewURL = $scope.streetviewURL + 'size=' + $scope.imgWidth + 'x' +$scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
+            return streetviewURL;
+        }
     }
 ]);
 

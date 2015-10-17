@@ -59,7 +59,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="venue in foursquareData['response']['venues']">
                 	<a href="https://foursquare.com/v/[[| venue.name |]]/[[| venue.id |]]" class="card">
 				        <div class="figure">
-				            <img height="192" src="https://scontent-fra3-1.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11248726_1463439890629954_875741758_n.jpg" alt="image">
+				            <img height="192" src="[[| getStreet(venue.location.lat, venue.location.lng) |]]" alt="image">
 				            <div class="figCaption">
 				                <div>[[| venue.hereNow.summary |]]</div>
 				                {{-- <span class="icon-eye"> 200</span>
