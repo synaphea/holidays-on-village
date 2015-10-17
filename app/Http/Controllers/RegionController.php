@@ -8,6 +8,9 @@ use App\Region;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Nathanmac\Utilities\Parser\Parser;
+use Nathanmac\Utilities\Parser\Exceptions\ParserException;
+
 class RegionController extends Controller
 {
     /**
@@ -57,7 +60,7 @@ class RegionController extends Controller
     {
         $region = Region::find(intval($id));
         $parser = new Parser();
-        return response() -> json($parser->json($region('geo')));
+        return response()->json($parser->json($region['geo']));
     }
 
     /**
