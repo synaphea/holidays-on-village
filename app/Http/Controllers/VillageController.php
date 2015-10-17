@@ -48,7 +48,7 @@ class VillageController extends Controller
      */
     public function show($id)
     {
-        $village = Village::find($id);
+        $village = Village::find(intval($id));
         return view('poi.village.show')->with('village', $village);
     }
 

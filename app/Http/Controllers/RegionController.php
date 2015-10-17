@@ -48,7 +48,8 @@ class RegionController extends Controller
      */
     public function show($id)
     {
-        $region = Region::find($id);
+        $region = Region::raw()->findOne(['_id' => intval($id)]);
+
         return view('poi.region.show')->with('region', $region);
     }
 

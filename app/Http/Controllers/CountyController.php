@@ -48,7 +48,7 @@ class CountyController extends Controller
      */
     public function show($id)
     {
-        $county = County::all();
+        $county = County::find(intval($id));
         return view('poi.county.show')->with('county', $county);
     }
 

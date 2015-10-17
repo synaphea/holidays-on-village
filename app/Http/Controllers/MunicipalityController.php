@@ -48,7 +48,7 @@ class MunicipalityController extends Controller
      */
     public function show($id)
     {
-        $municipality = Municipality::find($id);
+        $municipality = Municipality::find(intval($id));
         return view('poi.region.show')->with('municipality', $municipality);
     }
 
