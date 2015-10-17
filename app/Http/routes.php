@@ -26,3 +26,8 @@ Route::get('/search', ['as' => 'explore', function () {
 Route::get('/account/profile', ['as' => 'explore', function () {
     return view('profile');
 }]);
+
+Route::resource('region', 'RegionController');
+Route::resource('county', 'CountyController');
+Route::resource('municipality', 'MunicipalityController');
+Route::resource('village', 'VillageController');
