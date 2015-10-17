@@ -1,4 +1,4 @@
-<h2 class="osLight">Testimonials</h2>
+<h2 class="osLight">Εμπειρίες Χρήσης</h2>
 <div id="home-testimonials" class="carousel slide carousel-wb mb20" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#home-testimonials" data-slide-to="0" class="active"></li>
@@ -6,23 +6,19 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="avatar-2.png" class="home-testim-avatar" alt="Jane Smith">
+			<img src="avatar-5.png" class="home-testim-avatar" alt="Dimitrios Giannakis">
 			<div class="home-testim">
-				<div class="home-testim-text">There are
-					many variations of passages of Lorem Ipsum available, but the majority
-					have suffered alteration in some form, by injected humour, or randomised
-				words</div>
-				<div class="home-testim-name">Jane Smith</div>
+				<div class="home-testim-text">Δεν είναι ότι η εφαρμογή αποτελεί πνευματικό μας παιδί αλλά... 
+				είναι βέβαιο ότι θα φέρει την πολυπόθητη ανανέωση στον τρόπο που αντιμετοπίζουμε τον εναλλακτικό τουρισμό στην ελλάδα.
+				</div>
+				<div class="home-testim-name">Γιαννάκης Δημήτριος</div>
 			</div>
 		</div>
 		<div class="item">
-			<img src="avatar-3.png" class="home-testim-avatar" alt="Rust Cohle">
+			<img src="avatar-6.png" class="home-testim-avatar" alt="Vasilopoulos Vasilis">
 			<div class="home-testim">
-				<div class="home-testim-text">There are
-					many variations of passages of Lorem Ipsum available, but the majority
-					have suffered alteration in some form, by injected humour, or randomised
-				words</div>
-				<div class="home-testim-name">Rust Cohle</div>
+				<div class="home-testim-text">Άσπρος γάτος, μαύρος γάτος... Σημασία έχει να πιάνει ποντίκια.</div>
+				<div class="home-testim-name">Βασιλόπουλος Βασίλης</div>
 			</div>
 		</div>
 	</div>
