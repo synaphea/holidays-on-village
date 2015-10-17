@@ -11,4 +11,5 @@
 @stop
 @section('scripts')
     <script src="/assets/js/region/app.js" type="text/javascript"></script>
+	<script src="/assets/js/controllers/api.js" type="text/javascript"></script>    
 @stop

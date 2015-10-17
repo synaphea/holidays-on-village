@@ -3670,5 +3670,172 @@
             "parser",
             "xml"
         ]
+    },
+    {
+        "name": "cosenary/instagram",
+        "version": "v2.3",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cosenary/Instagram-PHP-API.git",
+            "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+            "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.2.0"
+        },
+        "time": "2014-11-29 13:10:42",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MetzWeb\\Instagram\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Christian Metz",
+                "email": "christian-metz1@gmx.net",
+                "homepage": "http://metzweb.net"
+            }
+        ],
+        "description": "An easy-to-use PHP Class for accessing Instagram's API.",
+        "homepage": "https://github.com/cosenary/Instagram-PHP-API",
+        "keywords": [
+            "api",
+            "instagram"
+        ]
+    },
+    {
+        "name": "graham-campbell/manager",
+        "version": "v2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
+            "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/2fb1898f21107d94a30f4660e5147c5bad04c7b9",
+            "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/contracts": "5.0.*|5.1.*",
+            "illuminate/support": "5.0.*|5.1.*",
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "graham-campbell/testbench-core": "~1.0",
+            "mockery/mockery": "^0.9.4",
+            "phpunit/phpunit": "~4.8|~5.0"
+        },
+        "time": "2015-10-06 16:53:10",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GrahamCampbell\\Manager\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Graham Campbell",
+                "email": "graham@alt-three.com"
+            }
+        ],
+        "description": "Manager Provides Some Manager Functionality For Laravel 5",
+        "keywords": [
+            "Graham Campbell",
+            "GrahamCampbell",
+            "Laravel Manager",
+            "Laravel-Manager",
+            "connector",
+            "framework",
+            "interface",
+            "laravel",
+            "manager"
+        ]
+    },
+    {
+        "name": "vinkla/instagram",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vinkla/instagram.git",
+            "reference": "eec4435a22f7c20b1389f233b524de4803871afc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vinkla/instagram/zipball/eec4435a22f7c20b1389f233b524de4803871afc",
+            "reference": "eec4435a22f7c20b1389f233b524de4803871afc",
+            "shasum": ""
+        },
+        "require": {
+            "cosenary/instagram": "~2.0",
+            "graham-campbell/manager": "~2.2",
+            "illuminate/contracts": "5.0.*|5.1.*",
+            "illuminate/support": "5.0.*|5.1.*",
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "graham-campbell/testbench": "~3.0",
+            "mockery/mockery": "^0.9.4",
+            "phpunit/phpunit": "^4.8|^5.0"
+        },
+        "time": "2015-10-07 06:22:48",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Vinkla\\Instagram\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Vincent Klaiber",
+                "email": "hello@vinkla.com"
+            }
+        ],
+        "description": "An Instagram bridge for Laravel",
+        "keywords": [
+            "api",
+            "facebook",
+            "image",
+            "images",
+            "instagram",
+            "laravel",
+            "media"
+        ]
     }
 ]

@@ -10,7 +10,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
                             <h1 class="pageTitle">{{ $region['name'] }}</h1>
-                            <div class="address"><span class="icon-pointer"></span>{{}}</div>
+                            <div class="address"><span class="icon-pointer"></span></div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -30,13 +30,14 @@
                 </div>
             </div>
         </div>
+
         <div class="clearfix"></div>
-        <div class="description">
-            <h3>Πληροφορίες</h3>
-            <p></p>
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $region['name'] }}')">
+            <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
+            <p>[[| introduction |]]</p>
         </div>
         <div class="share">
-            <h3>Δες το profile</h3>
+            <h3>ΜΟΙΡΑΣΟΥ ΤΟ</h3>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
                     <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>
@@ -52,23 +53,44 @@
                 </div>
             </div>
         </div>
-        <div class="amenities">
-            <h3>Foursquare</h3>
+        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('athens')">
+            <h3>FOURSQUARE</h3>
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-car"></span> Garage</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-tint"></span> Outdoor Pool</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-leaf"></span> Garden</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-shield"></span> Security System</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-wifi"></span> Internet</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-phone"></span> Telephone</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-asterisk"></span> Air Conditioning</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-sun-o"></span> Heating</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-fire"></span> Fireplace</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-arrows-v"></span> Balcony</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="venue in foursquareData['response']['venues']">
+                	<a href="https://foursquare.com/v/[[| venue.name |]]/[[| venue.id |]]" class="card">
+				        <div class="figure">
+				            <img height="192" src="[[| getStreet(venue.location.lat, venue.location.lng) |]]" alt="image">
+				            <div class="figCaption">
+				                <div>[[| venue.hereNow.summary |]]</div>
+				                {{-- <span class="icon-eye"> 200</span>
+				                <span class="icon-heart"> 54</span> --}}
+				                <span class="icon-bubble"> [[| venue.hereNow.count |]]</span>
+				            </div>
+				            <div class="figView"><span class="icon-eye"></span></div>
+				            <div class="figType">[[| venue.categories[0].name |]]</div>
+				        </div>
+				        <h2>[[| venue.name |]]</h2>
+				        <div class="cardAddress"><span class="icon-pointer"></span> [[| venue.location.formattedAddress.join(" ") |]]</div>
+				        {{-- <div class="cardRating">
+				            <span class="fa fa-star"></span>
+				            <span class="fa fa-star"></span>
+				            <span class="fa fa-star"></span>
+				            <span class="fa fa-star"></span>
+				            <span class="fa fa-star-o"></span>
+				            (146)
+				        </div> --}}
+				        <ul class="cardFeat">
+				            <li><span class="fa fa-moon-o"></span> [[| venue.stats.checkinsCount |]]</li>
+				            <li><span class="icon-drop"></span>  [[| venue.stats.usersCount |]]</li>
+				            <li><span class="icon-frame"></span>  [[| venue.stats.tipCount |]]</li>
+				        </ul>
+				        <div class="clearfix"></div>
+				    </a>
+                	
+                </div>
             </div>
         </div>
-         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false])
+         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false, 'title' => 'ΔΗΜΟΤΙΚΕΣ ΕΝΟΤΗΤΕΣ'])
         <div class="clearfix"></div>
     </div>
 
