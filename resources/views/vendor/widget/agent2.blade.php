@@ -1,9 +1,9 @@
-<div class="agent">
+<div class="agent2">
 	<a href="http://mariusn.com/themes/reales/profile.html" class="agent-avatar">
-		<img src="avatar-3.png" alt="Agent">
+		<img src="avatar-6.png" alt="Vasilopoulos Vasilis">
 		<div class="ring"></div>
 	</a>
-	<div class="agent-name osLight">Συνεργάτης</div>
+	<div class="agent-name osLight">Βασιλόπουλος Βασίλης</div>
 	<!-- <div class="agent-rating">
 		<span class="fa fa-star text-yellow"></span>
 		<span class="fa fa-star text-yellow"></span>
