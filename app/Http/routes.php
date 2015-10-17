@@ -22,11 +22,14 @@ Route::get('/account/profile', ['as' => 'explore', function () {
     return view('profile');
 }]);
 
-Route::resource('region', 'RegionController');
 Route::get('region/geo/{id}', 'RegionController@geo');
+Route::resource('region', 'RegionController');
+
 Route::get('county/geo/{id}', 'CountyController@geo');
 Route::resource('county', 'CountyController');
-Route::resource('municipality', 'MunicipalityController');
+
 Route::get('municipality/geo/{id}', 'MunicipalityController@geo');
-Route::resource('village', 'VillageController');
+Route::resource('municipality', 'MunicipalityController');
+
 Route::get('village/geo/{id}', 'VillageController@geo');
+Route::resource('village', 'VillageController');

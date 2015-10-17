@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Village;
+use App\Municipality;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -52,7 +53,10 @@ class VillageController extends Controller
     public function show($id)
     {
         $village = Village::find(intval($id));
-        return view('poi.village.show')->with('village', $village);
+        $municipality = Municipality::find(intval($village['municipality_id']));
+        return view('poi.village.show')
+            ->with('village', $village)
+            ->with('municipality', $municipality);
     }
 
     public function geo($id)

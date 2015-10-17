@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
-                            <h1 class="pageTitle">{{ $municipality['name'] }}</h1>
+                            <h1 class="pageTitle"><a href="/county/{{ $municipality['county_id'] }}">{{ $county['name'] }}</a> / {{ $municipality['name'] }}</h1>
                             <div class="address"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -83,6 +83,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
             </div>
         </div>
+        @include('vendor.widget.results', ['base' => 'village', 'paginate' => false])
         <div class="clearfix"></div>
     </div>
 

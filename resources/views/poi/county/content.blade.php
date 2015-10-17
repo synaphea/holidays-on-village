@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
-                            <h1 class="pageTitle">{{ $county['name'] }}</h1>
+                            <h1 class="pageTitle"><a href="/region/{{ $county['region_id'] }}">{{ $region['name'] }}</a> / {{ $county['name'] }}</h1>
                             <div class="address"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
