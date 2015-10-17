@@ -48,11 +48,9 @@ api.controller('FoursquareController', ['$scope', '$http',
         $scope.retrieve = function(query) {
             $scope.foursquareUrl = $scope.foursquareUrl + query + '&client_id=' + $scope.foursquareClientId + '&client_secret=' + $scope.foursquareClientSecret + '&v=20151710&limit=10';
             $http.get($scope.foursquareUrl).
-            success(function(data) {
-                $scope.foursquareData = data;
-
-                console.log(data);
-            });
+                success(function(data) {
+                    $scope.foursquareData = data;
+                });
         }
 
         $scope.imgWidth = 318;
