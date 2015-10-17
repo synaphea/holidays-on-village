@@ -53,6 +53,13 @@ class RegionController extends Controller
         return view('poi.region.show')->with('region', $region);
     }
 
+    public function geo($id)
+    {
+        $region = Region::find(intval($id));
+        $parser = new Parser();
+        return response() -> json($parser->json($region('geo')));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
