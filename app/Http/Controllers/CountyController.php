@@ -17,8 +17,8 @@ class CountyController extends Controller
      */
     public function index()
     {
-        $regions = County::all();
-        return view('regions.index')->with('regions', $regions);
+        $counties = County::all();
+        return view('poi.county.index')->with('counties', $counties);
     }
 
     /**
@@ -48,6 +48,8 @@ class CountyController extends Controller
      */
     public function show($id)
     {
+        $county = County::all();
+        return view('poi.county.show')->with('county', $county);
     }
 
     /**

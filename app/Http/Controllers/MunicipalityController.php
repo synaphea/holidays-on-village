@@ -17,8 +17,8 @@ class MunicipalityController extends Controller
      */
     public function index()
     {
-        $regions = Municipality::all();
-        return view('regions.index')->with('regions', $regions);
+        $municipalities = Municipality::all();
+        return view('poi.region.index')->with('municipalities', $municipalities);
     }
 
     /**
@@ -48,6 +48,8 @@ class MunicipalityController extends Controller
      */
     public function show($id)
     {
+        $municipality = Municipality::find($id);
+        return view('poi.region.show')->with('municipality', $municipality);
     }
 
     /**

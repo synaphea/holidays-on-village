@@ -17,8 +17,8 @@ class VillageController extends Controller
      */
     public function index()
     {
-        $regions = Village::all();
-        return view('regions.index')->with('regions', $regions);
+        $villages = Village::all();
+        return view('poi.village.index')->with('villages', $villages);
     }
 
     /**
@@ -48,6 +48,8 @@ class VillageController extends Controller
      */
     public function show($id)
     {
+        $village = Village::find($id);
+        return view('poi.village.show')->with('village', $village);
     }
 
     /**
