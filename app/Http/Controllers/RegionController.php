@@ -18,7 +18,7 @@ class RegionController extends Controller
     public function index()
     {
         $regions = Region::all();
-        return view('regions.index')->with('regions', $regions);
+        return view('poi.region.index')->with('regions', $regions);
     }
 
     /**
@@ -48,6 +48,8 @@ class RegionController extends Controller
      */
     public function show($id)
     {
+        $region = Region::find($id);
+        return view('poi.region.show')->with('region', $region);
     }
 
     /**
