@@ -1,5 +1,5 @@
 <div id="wrapper">
-    @include('poi.map', ['geojson' => $county['geo']])
+    @include('poi.map', ['url' => '/county/geo/'.$county['_id']])
 
     <div id="content" class="mob-max">
         <div class="singleTop">

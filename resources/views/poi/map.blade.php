@@ -10,7 +10,7 @@
 	
 		var map = L.mapbox.map('mapView', 'mapbox.streets');
 
-		var runLayer = L.mapbox.featureLayer().loadURL("/county/geo/{{ $county['_id'] }}")
+		var runLayer = L.mapbox.featureLayer().loadURL("{{ $url }}")
 		    .on('ready', function() {
 		        map.fitBounds(runLayer.getBounds());
 		    })
