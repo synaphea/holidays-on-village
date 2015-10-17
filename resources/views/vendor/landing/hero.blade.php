@@ -26,7 +26,7 @@
 	<div class="home-caption">
 		<div class="home-title">Ταξιδεύοντας, τα όνειρα αποκτούν Υπόσταση</div>
 		<div class="home-subtitle">Και εμείς είμαστε εδώ για να σας βοηθήσουμε</div>
-		<a href="#" class="btn btn-lg btn-black">Μάθαιτε περισότερα</a>
+		<a href="#" class="btn btn-lg btn-black">Μάθετε περισσότερα</a>
 	</div>
 	<div class="search-panel">
 		<form class="form-inline" role="form">
@@ -52,6 +52,6 @@
 	</div>
 </div>
 <div class="highlight">
-    <div class="h-title osLight">Find your new place with Reales</div>
-    <div class="h-text osLight">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
+    <div class="h-title osLight">Ανακαλύψτε τους πιό ενδιαφέροντες προορισμούς</div>
+    <div class="h-text osLight">Η φύσις μηδέν μήτε ατελές ποιεί μήτε μάτην. -Αριστοτέλης(384-322 π.Χ.)</div>
 </div>
