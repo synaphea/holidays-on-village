@@ -32,6 +32,7 @@
                             <div class="clearfix"></div>
                         </div>
                     </div>
+                    {{-- 
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <div class="agentAvatar summaryItem">
                             <div class="clearfix"></div>
@@ -40,12 +41,13 @@
                             <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn isThemeBtn">Contact Agent</a>
                         </div>
                     </div>
+                    --}}
                 </div>
             </div>
         </div>
         <div class="clearfix"></div>
         <div class="description">
-            <h3>Description</h3>
+            <h3>Περιγραφή</h3>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         </div>
         <div class="share">
@@ -81,6 +83,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
             </div>
         </div>
+        @include('vendor.widget.results', ['base' => 'municipality', 'paginate' => false])
         <div class="clearfix"></div>
     </div>
     <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">

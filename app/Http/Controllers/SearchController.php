@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\County;
+use App\Region;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -12,7 +12,7 @@ class SearchController extends Controller
 {
     public function index()
     {
-        $items = County::all();
+        $items = Region::all();
         return view('explore')->with('items', $items);
     }
 }

@@ -15,11 +15,8 @@ Route::get('/', ['as' => 'home', function () {
     return view('home');
 }]);
 
-Route::get('/home', ['as' => 'explore', function () {
-    return view('explore');
-}]);
-
 Route::get('/search', 'SearchController@index');
+Route::get('/home', 'SearchController@index');
 
 Route::get('/account/profile', ['as' => 'explore', function () {
     return view('profile');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Municipality;
+use App\Village;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Nathanmac\Utilities\Parser\Parser;
@@ -51,7 +52,12 @@ class MunicipalityController extends Controller
     public function show($id)
     {
         $municipality = Municipality::find(intval($id));
-        return view('poi.municipality.show')->with('municipality', $municipality);
+
+        $items = Village::where('municipality_id', intval($id))->get();
+
+        return view('poi.municipality.show')
+            ->with('municipality', $municipality)
+            ->with('items', $items);
     }
 
     public function geo($id)
