@@ -8,6 +8,9 @@ use App\County;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Nathanmac\Utilities\Parser\Parser;
+use Nathanmac\Utilities\Parser\Exceptions\ParserException;
+
 class CountyController extends Controller
 {
     /**
@@ -51,6 +54,13 @@ class CountyController extends Controller
         $county = County::find(intval($id));
         return view('poi.county.show')->with('county', $county);
     }
+
+    public function geo($id)
+    {
+        $county = County::find(intval($id));
+        $parser = new Parser();
+        return response()->json($parser->json($county['geo']));
+    }    
 
     /**
      * Show the form for editing the specified resource.

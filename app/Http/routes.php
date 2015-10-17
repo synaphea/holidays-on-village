@@ -28,6 +28,7 @@ Route::get('/account/profile', ['as' => 'explore', function () {
 }]);
 
 Route::resource('region', 'RegionController');
+Route::get('county/geo/{id}', 'CountyController@geo');
 Route::resource('county', 'CountyController');
 Route::resource('municipality', 'MunicipalityController');
 Route::resource('village', 'VillageController');
