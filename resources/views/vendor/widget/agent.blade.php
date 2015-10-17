@@ -8,8 +8,8 @@
 
 	<div  class="agent-name osLight">
 		
-		<var onbeforepritn="">
-			
+		<var> 
+			@include ('vendor.widget.helpers')
 		</var>
 		 
 	</div>
