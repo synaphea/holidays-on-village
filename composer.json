@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "jenssegers/mongodb": "^2.2",
         "jenssegers/mongodb-session": "^1.1",
-        "laravel/socialite": "^2.0"
+        "laravel/socialite": "^2.0",
+        "Nathanmac/Parser": "3.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

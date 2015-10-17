@@ -15,19 +15,17 @@ Route::get('/', ['as' => 'home', function () {
     return view('home');
 }]);
 
-Route::get('/home', ['as' => 'explore', function () {
-    return view('explore');
-}]);
-
-Route::get('/search', ['as' => 'explore', function () {
-    return view('explore');
-}]);
+Route::get('/search', 'SearchController@index');
+Route::get('/home', 'SearchController@index');
 
 Route::get('/account/profile', ['as' => 'explore', function () {
     return view('profile');
 }]);
 
 Route::resource('region', 'RegionController');
+Route::get('region/geo/{id}', 'RegionController@geo');
+Route::get('county/geo/{id}', 'CountyController@geo');
 Route::resource('county', 'CountyController');
 Route::resource('municipality', 'MunicipalityController');
+Route::get('municipality/geo/{id}', 'MunicipalityController@geo');
 Route::resource('village', 'VillageController');
