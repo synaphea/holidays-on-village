@@ -1,12 +1,12 @@
 @extends('vendor.dashboard')
 
-@section('title', $region['name'])
+@section('title', $municipality['name'])
 
 @section('content')
     @include('vendor.dashboard.header')
     @include('vendor.dashboard.left')
     
-    @include('poi.region.content')
+    @include('poi.municipality.content')
 
 @stop
 @section('scripts')
