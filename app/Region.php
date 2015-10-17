@@ -13,7 +13,6 @@ class Region extends Model
      */
     protected $dateFormat = 'U';
 
-    protected $connection = 'mongodb';
     protected $collection = 'regions';
 
 }

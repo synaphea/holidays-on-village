@@ -2,3 +2,5 @@
 Homestead.yaml
 Homestead.json
 .env
+public/access.log
+public/error.log

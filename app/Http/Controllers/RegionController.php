@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Region;
+use App\County;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+use Nathanmac\Utilities\Parser\Parser;
+use Nathanmac\Utilities\Parser\Exceptions\ParserException;
 
 class RegionController extends Controller
 {
@@ -18,7 +22,7 @@ class RegionController extends Controller
     public function index()
     {
         $regions = Region::all();
-        return view('regions.index')->with('regions', $regions);
+        return view('poi.region.index')->with('regions', $regions);
     }
 
     /**
@@ -48,6 +52,18 @@ class RegionController extends Controller
      */
     public function show($id)
     {
+        $region = Region::raw()->findOne(['_id' => intval($id)]);
+
+        $items = County::where('region_id', intval($id))->get();
+
+        return view('poi.region.show')->with('region', $region)->with('items', $items);
+    }
+
+    public function geo($id)
+    {
+        $region = Region::find(intval($id));
+        $parser = new Parser();
+        return response()->json($parser->json($region['geo']));
     }
 
     /**

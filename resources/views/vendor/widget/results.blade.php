@@ -1,15 +1,11 @@
 <div class="resultsList">
+	<h3>{{ $title or "" }}</h3>
     <div class="row">
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
-        @include('vendor.widget.results-item')
+        @foreach ($items as $item)
+            @include('vendor.widget.results-item', ['item' => $item, 'base' => $base])
+        @endforeach
     </div>
-    @include('vendor.widget.results-pagination')
+    @if($paginate)
+	    @include('vendor.widget.results-pagination')
+	@endif
 </div>

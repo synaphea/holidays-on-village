@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <a href="http://mariusn.com/themes/reales/single.html" class="card">
+    <a href="/{{ $base }}/{{ $item['_id'] }}" class="card">
         <div class="figure">
             <img height="192" src="https://scontent-fra3-1.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11248726_1463439890629954_875741758_n.jpg" alt="image">
             <div class="figCaption">
@@ -11,7 +11,7 @@
             <div class="figView"><span class="icon-eye"></span></div>
             <div class="figType">FOR SALE</div>
         </div>
-        <h2>Modern Residence in New York</h2>
+        <h2>{{ $item['name'] }}</h2>
         <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
         <div class="cardRating">
             <span class="fa fa-star"></span>
