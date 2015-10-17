@@ -37,7 +37,7 @@
             <p>[[| introduction |]]</p>
         </div>
         <div class="share">
-            {{-- <h3>Δες το profile</h3> --}}
+            <h3>ΜΟΙΡΑΣΟΥ ΤΟ</h3>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
                     <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>
@@ -53,23 +53,14 @@
                 </div>
             </div>
         </div>
-        <div class="amenities">
-            <h3>Foursquare</h3>
+        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('{{ $region['name'] }}')">
+            <h3>FOURSQUARE</h3>
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-car"></span> Garage</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-tint"></span> Outdoor Pool</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-leaf"></span> Garden</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-shield"></span> Security System</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-wifi"></span> Internet</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-phone"></span> Telephone</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-asterisk"></span> Air Conditioning</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem inactive"><span class="fa fa-sun-o"></span> Heating</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-fire"></span> Fireplace</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-arrows-v"></span> Balcony</div>
-                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                </div>
             </div>
         </div>
-         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false])
+         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false, 'title' => 'ΔΗΜΟΤΙΚΕΣ ΕΝΟΤΗΤΕΣ'])
         <div class="clearfix"></div>
     </div>
 
