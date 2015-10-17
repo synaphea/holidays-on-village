@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
-                            <h1 class="pageTitle">{{ $village['name'] }}</h1>
+                            <h1 class="pageTitle"><a href="/municipality/{{ $village['municipality_id'] }}">{{ $municipality['name'] }}</a> / {{ $village['name'] }}</h1>
                             <div class="address"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -84,11 +84,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-<<<<<<< HEAD
-=======
-     @include('vendor.widget.results', ['base' => 'village', 'paginate' => false])
-    <div class="clearfix"></div>
->>>>>>> fb32f2e2be46255d2d26a43cd7089944d7eb3de8
 
     <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
         <div class="modal-dialog">
