@@ -8,6 +8,9 @@ use App\Village;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Nathanmac\Utilities\Parser\Parser;
+use Nathanmac\Utilities\Parser\Exceptions\ParserException;
+
 class VillageController extends Controller
 {
     /**
@@ -50,6 +53,13 @@ class VillageController extends Controller
     {
         $village = Village::find(intval($id));
         return view('poi.village.show')->with('village', $village);
+    }
+
+    public function geo($id)
+    {
+        $village = Village::find(intval($id));
+        $parser = new Parser();
+        return response()->json($parser->json($village['geo']));
     }
 
     /**
