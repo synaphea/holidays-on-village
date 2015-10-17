@@ -81,6 +81,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
             </div>
         </div>
+        @include('vendor.widget.results', ['base' => 'municipality', 'paginate' => false])
         <div class="clearfix"></div>
     </div>
     <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">

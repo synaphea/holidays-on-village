@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\County;
+use App\Municipality;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -52,7 +53,10 @@ class CountyController extends Controller
     public function show($id)
     {
         $county = County::find(intval($id));
-        return view('poi.county.show')->with('county', $county);
+        
+        $items = Municipality::where('county_id', intval($id))->get();
+
+        return view('poi.county.show')->with('county', $county)->with('items', $items);
     }
 
     public function geo($id)
