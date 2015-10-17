@@ -32,8 +32,8 @@
         </div>
 
         <div class="clearfix"></div>
-        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('θράκη')">
-            <h3>Πληροφορίες</h3>
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $region['name'] }}')">
+            <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
             <p>[[| introduction |]]</p>
         </div>
         <div class="share">
