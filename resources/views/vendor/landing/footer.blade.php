@@ -11,7 +11,7 @@
                     <li><a href="http://mariusn.com/themes/reales/blog.html">Blog</a></li>
                     <li><a href="#">Βοήθεια</a></li>
                     <li><a href="#">Πολιτικές Εταιρίας</a></li>
-                    <li><a href="#">Terms &amp; Privacy</a></li>
+                    <li><a href="#">Όροι &amp; Ιδιωτικότητα</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
