@@ -32,3 +32,4 @@ Route::resource('county', 'CountyController');
 Route::resource('municipality', 'MunicipalityController');
 Route::get('municipality/geo/{id}', 'MunicipalityController@geo');
 Route::resource('village', 'VillageController');
+Route::get('village/geo/{id}', 'VillageController@geo');
