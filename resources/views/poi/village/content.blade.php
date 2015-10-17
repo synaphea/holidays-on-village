@@ -45,9 +45,9 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="description">
-            <h3>Description</h3>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve(' {{ $village['name'] }}')">
+            <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
+            <p>[[| introduction |]]</p>
         </div>
         <div class="share">
             <h3>Share on Social Networks</h3>
