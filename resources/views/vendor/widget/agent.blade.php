@@ -3,7 +3,16 @@
 		<img src="avatar-3.png" alt="Agent">
 		<div class="ring"></div>
 	</a>
-	<div class="agent-name osLight">Συνεργάτης</div>
+
+	
+
+	<div  class="agent-name osLight">
+		
+		<var onbeforepritn="">
+			
+		</var>
+		 
+	</div>
 	<!-- <div class="agent-rating">
 		<span class="fa fa-star text-yellow"></span>
 		<span class="fa fa-star text-yellow"></span>

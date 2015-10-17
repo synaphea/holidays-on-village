@@ -9,6 +9,19 @@
 	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 		@include('vendor.widget.poi-1')
 	</div>
+	
+</div>
+<h2 class="osLight">Προτεινόμενοι Προορισμοί</h2>
+<div class="row ">
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		@include('vendor.widget.poi-1')
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		@include('vendor.widget.poi-1')
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+		@include('vendor.widget.poi-1')
+	</div>
 	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 		@include('vendor.widget.poi-1')
 	</div>
