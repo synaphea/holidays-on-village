@@ -8,12 +8,13 @@
 	document.addEventListener("DOMContentLoaded", function(event) {
 		L.mapbox.accessToken = 'pk.eyJ1IjoidGhlb2ZpbGlzIiwiYSI6IjBkMjg3ZmFjMThkM2ViZDBmZjdhZTUzOWNjNDk1NjQyIn0.0I5QIOz7hnbW-xKxfUOTWA';
 	
-		var map = L.mapbox.map('mapView', 'mapbox.streets');
+		var map = L.mapbox.map('mapView', 'mapbox.streets', { zoomControl: false });
 
 		var runLayer = L.mapbox.featureLayer().loadURL("{{ $url }}")
 		    .on('ready', function() {
 		        map.fitBounds(runLayer.getBounds());
 		    })
 		    .addTo(map);
-		});
+		new L.Control.Zoom({ position: 'topright' }).addTo(map);
+	});
 </script>

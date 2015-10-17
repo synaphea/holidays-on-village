@@ -4,5 +4,7 @@
             @include('vendor.widget.results-item', ['item' => $item, 'base' => $base])
         @endforeach
     </div>
-    @include('vendor.widget.results-pagination')
+    @if($paginate)
+	    @include('vendor.widget.results-pagination')
+	@endif
 </div>

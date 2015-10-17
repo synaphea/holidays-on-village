@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Region;
+use App\County;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -53,7 +54,9 @@ class RegionController extends Controller
     {
         $region = Region::raw()->findOne(['_id' => intval($id)]);
 
-        return view('poi.region.show')->with('region', $region);
+        $items = County::where('region_id', intval($id))->get();
+
+        return view('poi.region.show')->with('region', $region)->with('items', $items);
     }
 
     public function geo($id)
