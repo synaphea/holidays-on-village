@@ -84,7 +84,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-     @include('vendor.widget.results', ['base' => 'village', 'paginate' => false])
     <div class="clearfix"></div>
 
     <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
