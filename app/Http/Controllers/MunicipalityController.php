@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Municipality;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Nathanmac\Utilities\Parser\Parser;
+use Nathanmac\Utilities\Parser\Exceptions\ParserException;
 
 class MunicipalityController extends Controller
 {
@@ -49,7 +51,14 @@ class MunicipalityController extends Controller
     public function show($id)
     {
         $municipality = Municipality::find(intval($id));
-        return view('poi.region.show')->with('municipality', $municipality);
+        return view('poi.municipality.show')->with('municipality', $municipality);
+    }
+
+    public function geo($id)
+    {
+        $municipality = Municipality::find(intval($id));
+        $parser = new Parser();
+        return response()->json($parser->json($municipality['geo']));
     }
 
     /**
