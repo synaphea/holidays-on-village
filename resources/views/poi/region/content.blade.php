@@ -10,7 +10,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
                             <h1 class="pageTitle">{{ $region['name'] }}</h1>
-                            <div class="address"><span class="icon-pointer"></span>{{}}</div>
+                            <div class="address"><span class="icon-pointer"></span></div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -30,13 +30,14 @@
                 </div>
             </div>
         </div>
+
         <div class="clearfix"></div>
-        <div class="description">
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('θράκη')">
             <h3>Πληροφορίες</h3>
-            <p></p>
+            <p>[[| introduction |]]</p>
         </div>
         <div class="share">
-            <h3>Δες το profile</h3>
+            {{-- <h3>Δες το profile</h3> --}}
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
                     <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>

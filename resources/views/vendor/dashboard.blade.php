@@ -15,7 +15,7 @@
 	<link href="/assets/css/app.css" rel="stylesheet" id="app">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js" type="text/javascript"></script>
 </head>
-<body class="notransition">
+<body class="notransition" ng-app="api">
 	@yield('content')
 	<script src="/assets/js/jquery-2.1.1.min.js"></script>
     <script src="/assets/js/jquery-ui.min.js"></script>
