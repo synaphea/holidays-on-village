@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('thraki')">
+        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('athens')">
             <h3>FOURSQUARE</h3>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="venue in foursquareData['response']['venues']">

@@ -39,6 +39,17 @@ api.controller('InstagramController', ['$scope', '$http',
     }
 ]);
 
+api.controller('PhotoController', ['$scope', '$http', function($scope, $http) {
+    $scope.retrieve = function(lat, lng) {
+        var url = 'https://api.instagram.com/v1/media/search?lat=' + lat + '&lng=' + lng + '&access_token=2227972880.6bd0d43.17e7232c04b34d2c999abd5201733e7a';
+        
+        $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
+            $scope.photos = data;
+            console.log(data);
+        });
+    }
+}]);
+
 // foursquare controller
 api.controller('FoursquareController', ['$scope', '$http',
     function($scope, $http) {
@@ -58,6 +69,7 @@ api.controller('FoursquareController', ['$scope', '$http',
         $scope.streetviewURL = 'https://maps.googleapis.com/maps/api/streetview?';
         $scope.streetviewKey = 'AIzaSyDtm7_hcQI0uEXsbrhF44Gon4TZP4LwjSM';
         $scope.getStreet = function(latitude, longitude) {
+            console.log(latitude, longitude);
             var streetviewURL = $scope.streetviewURL + 'size=' + $scope.imgWidth + 'x' +$scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
             return streetviewURL;
         }
@@ -77,3 +89,4 @@ api.controller('StreetViewImageController', ['$scope',
         }
     }
 ]);
+

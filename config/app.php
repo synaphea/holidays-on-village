@@ -142,6 +142,7 @@ return [
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Jenssegers\Mongodb\Session\SessionServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Vinkla\Instagram\InstagramServiceProvider::class,
 
     ],
 
@@ -194,6 +195,7 @@ return [
 
         'Moloquent' => Jenssegers\Mongodb\Model::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Instagram' => Vinkla\Instagram\Facades\Instagram::class
 
     ],
 
