@@ -2,7 +2,7 @@
 	
 	$items = Instagram::getTagMedia($region['greeklish'], 20); 
 
-	if($items == null) {
+	if(count($items->data) == 0) {
 		$items = Instagram::getTagMedia('greece', 20); 	
 	}
 	$i = 0; 
