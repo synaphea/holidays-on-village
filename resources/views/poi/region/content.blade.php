@@ -90,40 +90,7 @@
                 </div>
             </div>
         </div>
-         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false, 'title' => 'ΔΗΜΟΤΙΚΕΣ ΕΝΟΤΗΤΕΣ'])
+         @include('vendor.widget.results', ['base' => 'county', 'paginate' => false, 'title' => 'ΝΟΜΑΡΧΙΑΚΕΣ ΕΝΟΤΗΤΕΣ'])
         <div class="clearfix"></div>
-    </div>
-
-    <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="contactLabel">Contact Agent</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="contactForm">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                <input type="text" placeholder="Name" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                <input type="text" placeholder="Email" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                <input type="text" placeholder="Subject" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                <textarea placeholder="Message" rows="3" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
-                    <a href="#" class="btn btn-round btn-green isThemeBtn">Send message</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
