@@ -9,7 +9,6 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="summaryItem">
                             <h1 class="pageTitle"><a href="/region/{{ $county['region_id'] }}">{{ $region['name'] }}</a> / {{ $county['name'] }}</h1>
-                            <div class="address"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
                             <ul class="rating">
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -23,25 +22,8 @@
                                 <li><span class="icon-eye"></span> 200</li>
                                 <li><span class="icon-bubble"></span> 13</li>
                             </ul>
-                            <div class="clearfix"></div>
-                            <ul class="features">
-                                <li><span class="fa fa-moon-o"></span><div>2 Bedrooms</div></li>
-                                <li><span class="icon-drop"></span><div>2 Bathrooms</div></li>
-                                <li><span class="icon-frame"></span><div>2750 Sq Ft</div></li>
-                            </ul>
-                            <div class="clearfix"></div>
                         </div>
                     </div>
-                    {{-- 
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="agentAvatar summaryItem">
-                            <div class="clearfix"></div>
-                            <img class="avatar agentAvatarImg" src="images/avatar-2.png" alt="avatar">
-                            <div class="agentName">Jane Smith</div>
-                            <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn isThemeBtn">Contact Agent</a>
-                        </div>
-                    </div>
-                    --}}
                 </div>
             </div>
         </div>
@@ -103,39 +85,7 @@
                 </div>
             </div>
         </div>
-        @include('vendor.widget.results', ['base' => 'municipality', 'paginate' => false])
+        @include('vendor.widget.results', ['base' => 'municipality', 'paginate' => false, 'title' => 'ΔΗΜΟΙ'])
         <div class="clearfix"></div>
-    </div>
-    <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="contactLabel">Contact Agent</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="contactForm">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                <input type="text" placeholder="Name" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
-                                <input type="text" placeholder="Email" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                <input type="text" placeholder="Subject" class="form-control">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
-                                <textarea placeholder="Message" rows="3" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
-                    <a href="#" class="btn btn-round btn-green isThemeBtn">Send message</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
