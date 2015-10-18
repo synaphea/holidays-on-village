@@ -5,7 +5,7 @@
     <!-- εφανίζει μέσο όρο τιμών απο fourscuare -->
         <div class="priceCap"><span>$1,930,000</span></div>
     <!-- περιτο -->
-        <div class="figType">FOR SALE</div>
+        <div class="figType">ΠΕΡΙΟΧΗ</div>
         <div class="figCap">
     <!-- εμφανίζει το όνομα του προορισμού / αξιοθέατου -->
             <h3>Modern Residence in New York</h3>

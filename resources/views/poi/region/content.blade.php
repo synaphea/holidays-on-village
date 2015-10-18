@@ -32,7 +32,7 @@
         </div>
 
         <div class="clearfix"></div>
-        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $region['name'] }}')">
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $region['capital_city'] }}')">
             <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
             <p>[[| introduction |]]</p>
         </div>

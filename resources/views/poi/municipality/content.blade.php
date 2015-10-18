@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $municipality['name']}}')">
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $municipality['normal_name']}}')">
             <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
             <p>[[| introduction |]]</p>
         </div>
