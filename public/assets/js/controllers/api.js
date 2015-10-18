@@ -42,7 +42,7 @@ api.controller('InstagramController', ['$scope', '$http',
 api.controller('PhotoController', ['$scope', '$http', function($scope, $http) {
     $scope.retrieve = function(lat, lng) {
         var url = 'https://api.instagram.com/v1/media/search?lat=' + lat + '&lng=' + lng + '&access_token=2227972880.6bd0d43.17e7232c04b34d2c999abd5201733e7a';
-        
+
         $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
             $scope.photos = data;
             console.log(data);
@@ -90,3 +90,21 @@ api.controller('StreetViewImageController', ['$scope',
     }
 ]);
 
+// panoramio controller
+api.controller('PanoramioController', ['$scope','$http',
+    function($scope, $http) {
+      $scope.panoramioURL = 'http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=full&from=0&to=10&'
+      $scope.retrieve = function(minLng,minLat,maxLng,maxLat) {
+          //minx, miny, maxx, maxy define the area to show photos from (minimum longitude, latitude, maximum longitude and latitude, respectively).
+          $scope.panoramioURL = 'minx='+minLng+'&miny='+minLat+'&maxx='+maxLng+'&maxy='+maxLat'&size=medium';
+          $scope.panoramioImageURLS = [];
+          $http.get($scope.foursquareUrl).
+              success(function(data) {
+                var photos = data['photos'];
+                for (var i=0; i<photos.length; i++){
+                  $scope.panoramioImageURLS[i] = photos['photo_file_url'];
+                }
+              });
+      }
+    }
+]);
