@@ -9,4 +9,5 @@
 @stop
 @section('scripts')
     <script src="/assets/js/dashboard/app.js" type="text/javascript"></script>
+    <script src="/assets/js/controllers/api.js" type="text/javascript"></script>
 @stop

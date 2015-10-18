@@ -1,9 +1,10 @@
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <a href="/{{ $base }}/{{ $item['_id'] }}" class="card">
+    <a href="/{{ $base }}/{{ $item['_id'] }}" class="card"  
+    	ng-controller="PanoramioController" data-ng-init="retrieve(23, 37, 23.709699, 37.9767867)">
         <div class="figure">
-            <img height="192" src="https://scontent-fra3-1.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11248726_1463439890629954_875741758_n.jpg" alt="image">
+            <img height="192" src="[[| image['photo_file_url'] |]]" alt="image">
             <div class="figCaption">
-                <div></div>
+                <div>[[| image['photo_title']  |]]</div>
                 {{-- <span class="icon-eye"> 200</span>
                 <span class="icon-heart"> 54</span>
                 <span class="icon-bubble"> 13</span> --}}
