@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve(' {{ $village['name'] }}')">
+        <div class="description" ng-controller="WikipediaController" data-ng-init="retrieve('{{ $village['name'] }}')">
             <h3>ΠΛΗΡΟΦΟΡΙΕΣ</h3>
             <p>[[| introduction |]]</p>
         </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('thraki')">
+        <div class="amenities" ng-controller="FoursquareController" data-ng-init="retrieve('{{ $village['name'] }}')">
             <h3>FOURSQUARE</h3>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="venue in foursquareData['response']['venues']">

@@ -1,4 +1,4 @@
-<?php  $items = Instagram::searchMedia(37.979513, 23.715892, 5000); $i = 0;?>
+<?php  $items = Instagram::searchMedia(37.037368, 22.115621, 5000); $i = 0;?>
 
 <div id="carouselFull" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
