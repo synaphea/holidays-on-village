@@ -33,3 +33,5 @@ Route::resource('municipality', 'MunicipalityController');
 
 Route::get('village/geo/{id}', 'VillageController@geo');
 Route::resource('village', 'VillageController');
+
+Route::get('/account/profile', 'ProfileController@index');

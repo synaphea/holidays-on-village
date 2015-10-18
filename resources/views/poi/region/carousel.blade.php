@@ -1,4 +1,12 @@
-<?php  $items = Instagram::searchMedia(37.979513, 23.715892, 5000); $i = 0;?>
+<?php  
+	
+	$items = Instagram::getTagMedia($region['greeklish'], 20); 
+
+	if(count($items->data) == 0) {
+		$items = Instagram::getTagMedia('greece', 20); 	
+	}
+	$i = 0; 
+?>
 
 <div id="carouselFull" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
