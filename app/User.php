@@ -37,6 +37,8 @@ class User extends Model implements AuthenticatableContract,
             return $this->facebook();
         } else if ($this->google  != null) {
             return $this->google();
+        } else {
+        	return ['']
         }
     }
 
