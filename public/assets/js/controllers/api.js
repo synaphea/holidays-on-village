@@ -39,16 +39,18 @@ api.controller('InstagramController', ['$scope', '$http',
     }
 ]);
 
-api.controller('PhotoController', ['$scope', '$http', function($scope, $http) {
-    $scope.retrieve = function(lat, lng) {
-        var url = 'https://api.instagram.com/v1/media/search?lat=' + lat + '&lng=' + lng + '&access_token=2227972880.6bd0d43.17e7232c04b34d2c999abd5201733e7a';
+api.controller('PhotoController', ['$scope', '$http',
+    function($scope, $http) {
+        $scope.retrieve = function(lat, lng) {
+            var url = 'https://api.instagram.com/v1/media/search?lat=' + lat + '&lng=' + lng + '&access_token=2227972880.6bd0d43.17e7232c04b34d2c999abd5201733e7a';
 
-        $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
-            $scope.photos = data;
-            console.log(data);
-        });
+            $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
+                $scope.photos = data;
+                console.log(data);
+            });
+        }
     }
-}]);
+]);
 
 // foursquare controller
 api.controller('FoursquareController', ['$scope', '$http',
@@ -59,9 +61,9 @@ api.controller('FoursquareController', ['$scope', '$http',
         $scope.retrieve = function(query) {
             $scope.foursquareUrl = $scope.foursquareUrl + query + '&client_id=' + $scope.foursquareClientId + '&client_secret=' + $scope.foursquareClientSecret + '&v=20151710&limit=10';
             $http.get($scope.foursquareUrl).
-                success(function(data) {
-                    $scope.foursquareData = data;
-                });
+            success(function(data) {
+                $scope.foursquareData = data;
+            });
         }
 
         $scope.imgWidth = 318;
@@ -69,8 +71,7 @@ api.controller('FoursquareController', ['$scope', '$http',
         $scope.streetviewURL = 'https://maps.googleapis.com/maps/api/streetview?';
         $scope.streetviewKey = 'AIzaSyDtm7_hcQI0uEXsbrhF44Gon4TZP4LwjSM';
         $scope.getStreet = function(latitude, longitude) {
-            console.log(latitude, longitude);
-            var streetviewURL = $scope.streetviewURL + 'size=' + $scope.imgWidth + 'x' +$scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
+            var streetviewURL = $scope.streetviewURL + 'size=' + $scope.imgWidth + 'x' + $scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
             return streetviewURL;
         }
     }
@@ -84,27 +85,26 @@ api.controller('StreetViewImageController', ['$scope',
         $scope.streetviewURL = 'https://maps.googleapis.com/maps/api/streetview?';
         $scope.streetviewKey = 'AIzaSyDtm7_hcQI0uEXsbrhF44Gon4TZP4LwjSM';
         $scope.retrieve = function(latitude, longitude) {
-            $scope.streetviewURL = $scope.streetviewURL + 'size=' + scope.imgWidth + 'x' +$scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
+            $scope.streetviewURL = $scope.streetviewURL + 'size=' + scope.imgWidth + 'x' + $scope.imgHeight + '&location=' + latitude + ',' + longitude + '&heading=151.78&pitch=-0.76' + '&key=' + $scope.streetviewKey;
             return $scope.streetviewURL;
         }
     }
 ]);
 
 // panoramio controller
-api.controller('PanoramioController', ['$scope','$http',
+api.controller('PanoramioController', ['$scope', '$http',
     function($scope, $http) {
-      $scope.panoramioURL = 'http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=full&from=0&to=10&'
-      $scope.retrieve = function(minLng,minLat,maxLng,maxLat) {
-          //minx, miny, maxx, maxy define the area to show photos from (minimum longitude, latitude, maximum longitude and latitude, respectively).
-          $scope.panoramioURL = 'minx='+minLng+'&miny='+minLat+'&maxx='+maxLng+'&maxy='+maxLat'&size=medium';
-          $scope.panoramioImageURLS = [];
-          $http.get($scope.foursquareUrl).
-              success(function(data) {
-                var photos = data['photos'];
-                for (var i=0; i<photos.length; i++){
-                  $scope.panoramioImageURLS[i] = photos['photo_file_url'];
-                }
-              });
-      }
+        $scope.panoramioURL = 'http://www.panoramio.com/map/get_panoramas.php?order=popularity&set=full&from=0&to=30&'
+        $scope.retrieve = function(minLng, minLat, maxLng, maxLat) {
+            //minx, miny, maxx, maxy define the area to show photos from (minimum longitude, latitude, maximum longitude and latitude, respectively).
+            $scope.panoramioURL = $scope.panoramioURL + 'minx=' + minLng + '&miny=' + minLat + '&maxx=' + maxLng + '&maxy=' + maxLat + '&size=medium';
+            $scope.panoramioImageURLS = [];
+            $http.jsonp($scope.panoramioURL + '&callback=JSON_CALLBACK').
+                success(function(data) {
+                    var photos = data['photos'];
+                    var i = Math.floor((Math.random() * 30) + 1); 
+                    $scope.image = photos[i];
+                });
+        }
     }
 ]);
