@@ -1,18 +1,9 @@
-<div class="agent">
+<div class="agent4">
 	<a href="http://mariusn.com/themes/reales/profile.html" class="agent-avatar">
-		<img src="avatar-3.png" alt="Agent">
+		<img src="avatar-8.png" alt="Theofilis Giorgos">
 		<div class="ring"></div>
 	</a>
-
-	
-
-	<div  class="agent-name osLight">
-		
-		<var> 
-			@include ('vendor.widget.helpers')
-		</var>
-		 
-	</div>
+	<div class="agent-name osLight">Θεωφίλης Γιώργος</div>
 	<!-- <div class="agent-rating">
 		<span class="fa fa-star text-yellow"></span>
 		<span class="fa fa-star text-yellow"></span>
