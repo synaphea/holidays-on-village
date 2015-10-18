@@ -21,5 +21,12 @@
 				<div class="home-testim-name">Βασιλόπουλος Βασίλης</div>
 			</div>
 		</div>
+		<div class="item">
+			<img src="avatar-7.png" class="home-testim-avatar" alt="Vasilopoulos Vasilis">
+			<div class="home-testim">
+				<div class="home-testim-text">Άσπρος γάτος, μαύρος γάτος... Σημασία έχει να πιάνει ποντίκια.</div>
+				<div class="home-testim-name">t</div>
+			</div>
+		</div>
 	</div>
 </div>
