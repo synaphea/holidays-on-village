@@ -11,8 +11,8 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="profile-card">
-                                <div class="pc-avatar"><img src="images/avatar-1.png" alt="avatar"></div>
-                                <div class="pc-name">John Smith</div>
+                                <div class="pc-avatar"><img src="{{ Auth::user()->social->avatar }}" alt="avatar"></div>
+                                <div class="pc-name">{{ Auth::user()->social->name }}</div>
                             </div>
                         </div>
                         <div class="col-xs-3">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="row pb10">
                         <div class="col-xs-4"><strong>Email</strong></div>
-                        <div class="col-xs-8 align-right"><a href="mailto:#" class="text-green isThemeText">john.smith@email.com</a></div>
+                        <div class="col-xs-8 align-right"><a href="mailto://{{ Auth::user()->email }}" class="text-green isThemeText">{{ Auth::user()->email }}</a></div>
                     </div>
                     <div class="row pb10">
                         <div class="col-xs-4"><strong>Skype</strong></div>
@@ -51,32 +51,9 @@
                 <div class="col-md-6 pb20">
                     <div class="pc-about osLight">About me</div>
                     <div class="pb20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus. Phasellus mollis imperdiet placerat.</div>
-                    <div class="pc-about osLight">What others said about me</div>
-                    <div id="testimonials" class="carousel slide carousel-wb mb20" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
-                            <li data-target="#testimonials" data-slide-to="1"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="images/avatar-2.png" class="testim-avatar" alt="avatar">
-                                <div class="testim">
-                                    <div class="testim-text">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
-                                    <div class="testim-name">Jane Smith</div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="images/avatar-3.png" class="testim-avatar" alt="avatar">
-                                <div class="testim">
-                                    <div class="testim-text">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
-                                    <div class="testim-name">Rust Cohle</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="pc-title osLight">Send me a message</div>
+                    <div class="pc-title osLight">Επικοινωνία</div>
                     <form role="form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Your Name">
@@ -91,11 +68,6 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="rightContainer">
-            <h3>Listed Properties</h3>
-            @include('vendor.widget.results')
-        </div>
     </div>
     <div class="clearfix"></div>
 </div>
